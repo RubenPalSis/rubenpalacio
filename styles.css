@@ -367,8 +367,9 @@ body {
 /* ===== EXPERIENCIA ===== */
 .experience-grid {
   display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
-  max-width: 800px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -417,6 +418,13 @@ body {
   margin-right: 1rem;
 }
 
+.exp-role {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--secondary);
+  margin-top: 0.2rem;
+}
+
 .period {
   color: var(--primary);
   font-weight: 500;
@@ -437,7 +445,7 @@ body {
   color: var(--primary);
 }
 
-var(--secondary);
+
 
 #estudios {
   padding: 4rem 0;
@@ -847,7 +855,7 @@ var(--secondary);
 /* ===== HABILIDADES ===== */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
   gap: 2rem;
   max-width: 1000px;
   margin: 0 auto;
@@ -963,7 +971,8 @@ var(--secondary);
   padding: 1.5rem;
   background: var(--card-bg);
   border-radius: 12px;
-  height: 480px;
+  min-height: 480px;
+  height: auto;
   flex-direction: column;
 }
 
@@ -1352,7 +1361,8 @@ var(--secondary);
   
   .project-card {
     padding: 1.25rem;
-    height: 460px;
+    min-height: 460px;
+    height: auto;
   }
   
   .project-header {
@@ -1405,6 +1415,23 @@ var(--secondary);
     height: 45px;
   }
   
+  .experience-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .exp-header {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .exp-header h4 {
+    margin-right: 0;
+  }
+
+  .period {
+    white-space: normal;
+  }
+
   .skills-grid {
     grid-template-columns: 1fr;
   }
@@ -1428,7 +1455,8 @@ var(--secondary);
 @media (max-width: 480px) {
   .project-card {
     padding: 1rem;
-    height: 420px;
+    min-height: 420px;
+    height: auto;
   }
   
   .gallery-grid {
