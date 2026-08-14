@@ -1062,6 +1062,69 @@ body {
   border-color: transparent;
 }
 
+/* Single image gallery - full width */
+.gallery-grid.single-image {
+  grid-template-columns: 1fr;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.gallery-grid.single-image img {
+  height: 200px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: var(--section-alt);
+}
+
+/* Project type badge */
+.project-type-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--secondary);
+  background: var(--section-alt);
+  padding: 0.25rem 0.75rem;
+  border-radius: 2rem;
+  margin-top: 0.35rem;
+}
+
+.project-type-badge i {
+  font-size: 0.72rem;
+  color: var(--primary);
+}
+
+/* Project buttons container */
+.project-buttons {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Carousel counter */
+.carousel-nav-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.carousel-counter {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--secondary);
+  letter-spacing: 0.5px;
+  min-width: 40px;
+  text-align: center;
+}
+
+.carousel-counter .current {
+  color: var(--primary);
+  font-weight: 700;
+}
+
 .project-info {
   padding-top: 0.75rem;
 }
@@ -1379,6 +1442,14 @@ body {
   .gallery-grid img {
     height: 100px;
   }
+
+  .gallery-grid.single-image img {
+    height: 160px;
+  }
+
+  .project-buttons {
+    justify-content: center;
+  }
   
   .carousel-btn {
     width: 40px;
@@ -1465,6 +1536,14 @@ body {
   
   .gallery-grid img {
     height: 90px;
+  }
+
+  .gallery-grid.single-image img {
+    height: 130px;
+  }
+
+  .carousel-counter {
+    font-size: 0.78rem;
   }
   
   .carousel-btn {
